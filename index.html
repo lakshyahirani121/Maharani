@@ -507,8 +507,8 @@
 //     n8n Webhook 1 (POST)  — saves booking to Google Sheets + sends WhatsApp
 //     n8n Webhook 2 (GET)   — returns { slot1: X, slot2: Y, slot3: Z } (people booked per slot for a date)
 // ──────────────────────────────────────
-const N8N_BOOKING_URL = 'https://YOUR-N8N-INSTANCE/webhook/maharani-book';
-const N8N_AVAIL_URL   = 'https://YOUR-N8N-INSTANCE/webhook/maharani-availability';
+const N8N_BOOKING_URL = 'https://n8n.srv1233540.hstgr.cloud/webhook/maharani-book';
+const N8N_AVAIL_URL   = 'https://n8n.srv1233540.hstgr.cloud/webhook/maharani-availability';
 
 // Max PEOPLE per slot (not bookings — this counts total guests)
 const MAX_CAPACITY = 30;
@@ -632,7 +632,7 @@ document.getElementById('resForm').addEventListener('submit', async function(e) 
   };
 
   try {
-    const r = await fetch(N8N_BOOKING_URL, {
+    const r = await fetch(https://n8n.srv1233540.hstgr.cloud/webhook/maharani-book, {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify(payload),
