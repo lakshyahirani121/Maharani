@@ -7,10 +7,9 @@ git remote add origin https://github.com/lakshyahirani121/maharani.git
 git branch -M main
 git push -u origin main
 
-# Rename the file
-mv maharani.html index.html
+# Rename properly with the .html extension
+mv Maharani index.html
 
-# Commit and push
 git add .
 git commit -m "fix: rename to index.html"
 git push
