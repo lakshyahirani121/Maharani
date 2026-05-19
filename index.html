@@ -423,9 +423,6 @@
     </div>
 
     <div id="booking-form-area">
-      <div class="setup-banner" id="setup-notice">
-        ⚙️ <strong>Developer note:</strong> Replace <code>N8N_BOOKING_URL</code> and <code>N8N_AVAIL_URL</code> at the top of the &lt;script&gt; with your actual n8n webhook URLs, then remove this banner.
-      </div>
 
       <div class="form-card">
         <form id="resForm" novalidate>
@@ -632,7 +629,7 @@ document.getElementById('resForm').addEventListener('submit', async function(e) 
   };
 
   try {
-    const r = await fetch(https://n8n.srv1233540.hstgr.cloud/webhook/maharani-book, {
+    const r = await fetch(N8N_BOOKING_URL, {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify(payload),
